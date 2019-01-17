@@ -1,12 +1,29 @@
 # i3-config-wizard(1).
 # Doc https://i3wm.org/docs/userguide.html for a complete reference!
 # ======== Vars =========
-# wq
-# $TERMINAL = URxvt
+# 
+# $TERM = URxvt
 
 # ======== Fonts ========
 
 font pango:DejaVu Sans Mono 10
+
+# ======== Dropdown ========
+for_window [instance="dropdown"] floating enable
+for_window [instance="dropdown"] resize set 625 400
+for_window [instance="dropdown"] move scratchpad
+for_window [instance="dropdown"] border pixel 5
+exec --no-startup-id i3-sensible-terminal -name dropdown
+
+for_window [instance="music"] floating enable
+for_window [instance="music"] resize set 625 400
+for_window [instance="music"] move scratchpad
+for_window [instance="music"] board pixel 5
+exec --no-startup-id urxvt -name music -e ncmpcpp
+
+
+
+
 
 
 # ======== Bindings ========
@@ -21,7 +38,10 @@ bindsym $mod+Shift+Return exec i3-sensible-terminal -name "floating_term"
 bindsym $mod+Shift+q kill
 
 bindsym Super_L exec --no-startup-id rofi -show run
+#scratchpads
+bindsym $mod+u [instance="dropdown"] scratchpad show; [instance="dropdown"] move position center
 
+bindsym $mod+m [instance="music"] scratchpad show; [instance="music"] move position center
 # change focus
 bindsym $mod+j focus left
 bindsym $mod+k focus down
@@ -70,7 +90,7 @@ bindsym $mod+space focus mode_toggle
 bindsym $mod+a focus parent
 
 #Screenshot
-bindsym --release Print exec "scrot -m '~/Pictures/ScreenShots/%Y-%m-%d-%T-screenshot.png'"
+bindsym --release Print exec "scrot  '~/Pictures/ScreenShots/%Y-%m-%d-%T-screenshot.png'"
 
 set $ws1 "1"
 set $ws2 "2"
@@ -143,7 +163,6 @@ bindsym XF86MonBrightnessUp exec --no-startup-id xbacklight -inc 5
 
 # Lock
 #bindsym $mod+Shift+x exec ~/.scripts/lock
-
 # ======== Startup ========
 
 # Polybar
@@ -153,19 +172,19 @@ exec_always --no-startup-id ~/.config/polybar/launch.sh
 exec compton -CGb  
 
 # Background
-exec_always feh --bg-fill ~/Pictures/.wallpapers/HollowPaper.jpg
-exec_always wal -q -i ~/Pictures/.wallpapers/HollowPaper.jpg
+#exec_always feh --bg-fill ~/Pictures/.wallpapers/HollowPaper.jpg
+#exec_always wal -q -i ~/Pictures/.wallpapers/HollowPaper.jpg
 exec i3-sensible-terminal
 exec firefox 
 exec --no-startup-id ~/.config/discord/launch.sh
 #exec atom
+
 
 # ======= Workspace Setup =======
 
 #assign [class="Atom"] $ws3
 assign [class="Firefox"] $ws2
 assign [class="discord"] $ws3
-assign [class="ncmpcpp"] $ws4
 
 # ======== i3 Theme ========
 
