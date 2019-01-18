@@ -90,7 +90,7 @@ bindsym $mod+space focus mode_toggle
 bindsym $mod+a focus parent
 
 #Screenshot
-bindsym --release Print exec "scrot  '~/Pictures/ScreenShots/%Y-%m-%d-%T-screenshot.png'"
+bindsym --release Print exec "scrot -m '~/Pictures/ScreenShots/%s_%H%M_%d.%m.%Y_$wx$h.png'"
 
 set $ws1 "1"
 set $ws2 "2"
@@ -177,6 +177,7 @@ exec compton -CGb
 exec i3-sensible-terminal
 exec firefox 
 exec --no-startup-id ~/.config/discord/launch.sh
+exec --no-startup-id i3-sensible-terminal -name news -e newsboat
 #exec atom
 
 
@@ -185,29 +186,30 @@ exec --no-startup-id ~/.config/discord/launch.sh
 #assign [class="Atom"] $ws3
 assign [class="Firefox"] $ws2
 assign [class="discord"] $ws3
+assign [instance="news"] $ws4
 
 # ======== i3 Theme ========
 
-# Solarized
-set $yellow          #b58900
-set $orange          #cb4b16
-set $red             #dc322f
-set $magenta         #d33682
-set $violet          #6c71c4
-set $blue            #268bd2
-set $cyan            #2aa198
-set $cyan_faded      #197170
-set $green           #859900
-
-set $background0     #657b83
-set $background1     #586e75
-set $background2     #073642
-set $background3     #002b36
-
-set $foreground0     #839496
-set $foreground1     #93a1a1
-set $foreground2     #eee8d5
-set $foreground3     #fdf6e3
+## Solarized
+#set $yellow          #b58900
+#set $orange          #cb4b16
+#set $red             #dc322f
+#set $magenta         #d33682
+#set $violet          #6c71c4
+#set $blue            #268bd2
+#set $cyan            #2aa198
+#set $cyan_faded      #197170
+#set $green           #859900
+#
+#set $background0     #657b83
+#set $background1     #586e75
+#set $background2     #073642
+#set $background3     #002b36
+#
+#set $foreground0     #839496
+#set $foreground1     #93a1a1
+#set $foreground2     #eee8d5
+#set $foreground3     #fdf6e3
 
 # window colors             border       bg           text          indic
 client.focused              $cyan        $cyan        $foreground2  $cyan
