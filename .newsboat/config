@@ -1,0 +1,4 @@
+auto-reload yes
+browser firefox
+macro f set browser "w3m" ; open-in-browser ; set browser firefox
+macro v set browser "mpv --ytdl --ontop --no-border --force-window --autofit=960x540 --geometry=-20-50 %u > /dev/null &"; open-in-browser ; set browser firefox
