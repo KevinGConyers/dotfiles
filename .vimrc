@@ -19,6 +19,7 @@ Plugin 'vim-syntastic/syntastic'
 Plugin 'nvie/vim-flake8'
 Plugin 'lervag/vimtex'
 "Plugin 'Valloric/YouCompleteMe'
+Plugin 'l04m33/vlime', {'rtp': 'vim/'}
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
