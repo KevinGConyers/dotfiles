@@ -14,7 +14,8 @@ https://www.youtube.com/feeds/videos.xml?user=RossBoomsocks "youtube"
 https://www.youtube.com/feeds/videos.xml?playlist_id=PL6NdkXsPL07IbXr-jMNJk0WUFej0-XDzY
 https://www.reddit.com/r/unixporn/.rss "reddit" 
 http://lukesmith.xyz/rss.xml "Other" "~luke Smith Homepage"
-https://www.reddit.com/.rss "reddit" "~Reddit Home Page"
+https://www.reddit.com/.rss "Reddit" "~Reddit Home Page"
+https://news.ycombinator.com/rss "News" "~Hacker News" 
 https://boards.4chan.org/g/index.rss
 https://boards.4chan.org/pol/index.rss
 https://boards.4chan.org/k/index.rss

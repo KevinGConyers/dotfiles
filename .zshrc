@@ -101,3 +101,7 @@ export PATH=/usr/bin/android-studio/bin:$PATH
  VISUAL=editor; export VISUAL EDITOR=editor; export EDITOR
 export EDITOR=/usr/bin/vim
 export VISUAL=/usr/bin/vim
+
+
+#Path
+export PATH=~/bin:.:$PATH

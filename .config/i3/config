@@ -172,7 +172,7 @@ exec_always --no-startup-id ~/.config/polybar/launch.sh
 exec compton -CGb  
 
 # Background
-#exec_always feh --bg-fill ~/Pictures/.wallpapers/HollowPaper.jpg
+exec_always feh --bg-fill ~/Pictures/.wallpapers/ArchPunk.jpg
 #exec_always wal -q -i ~/Pictures/.wallpapers/HollowPaper.jpg
 exec i3-sensible-terminal
 exec firefox 
