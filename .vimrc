@@ -65,5 +65,6 @@ set spellfile=$HOME/.vim/spell/en.utf-8.add
 "YouCompleteMe settings
 let g:ycm_keep_logfiles = 1
 let g:ycm_log_level = 'debug'
+
 "HTML And JavaScript
 autocmd BufNewFile js.html -1read ~/.vim/snippets/js.html
