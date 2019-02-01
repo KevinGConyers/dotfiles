@@ -56,32 +56,14 @@ iabbrev waht what
 iabbrev kk Kevin Conyers
 iabbrev @@ kgc0019@tigermail.auburn.edu
 iabbrev ** /**/
+
 "Spelling
+syntax on
 set spelllang=en
 set spellfile=$HOME/.vim/spell/en.utf-8.add
-"Python settings
-au FileType py
-			\  setlocal tabstop =4
-			\| setlocal softtabstop=4
-			\| setlocal shiftwidth =4
-			\| setlocal textwidth = 79
-			\| setlocal expandtab
-			\| setlocal autoindent
-			\| setlocal fileformat=unix
-			\| setlocal encoding=utf-8
-au FileType py  match BadWhiteSpcae /\s\+$/
-let python_highlight_all =1
-syntax on
-
-
-
 
 "YouCompleteMe settings
 let g:ycm_keep_logfiles = 1
 let g:ycm_log_level = 'debug'
-
-"Python settings
-autocmd BufNewFile *.py -1read ~/.vim/snippets/pythonTemplate1.py
-
 "HTML And JavaScript
 autocmd BufNewFile js.html -1read ~/.vim/snippets/js.html

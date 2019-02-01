@@ -1,9 +1,7 @@
 # i3-config-wizard(1).
 # Doc https://i3wm.org/docs/userguide.html for a complete reference!
 # ======== Vars =========
-# 
-# $TERM = URxvt
-
+# # $TERM = URxvt 
 # ======== Fonts ========
 
 font pango:DejaVu Sans Mono 10
@@ -215,8 +213,8 @@ set $black 	     #000000
 
 # window colors             border       bg           text          indic
 client.focused              $blue        $blue        $foreground2  $blue
-client.focused_inactive     $black  	 $black       $black        $black
-client.unfocused            $black  	 $black       $black   	    $black
+client.focused_inactive     $cyan_faded  $cyan_faded  $foreground1  $cyan_faded
+client.unfocused            $cyan_faded  $cyan_faded  $foreground2  $cyan_faded
 client.urgent               $orange      $orange      $foreground2  $orange
 
 # i3-gaps

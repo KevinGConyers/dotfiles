@@ -14,3 +14,4 @@ autocmd Filetype tex inoremap <leader>it \item{}<Esc>i
 autocmd Filetype tex set wrap linebreak
 autocmd Filetype tex setlocal spell
 autocmd BufNewFile notes.tex -1read ~/.vim/snippets/Notes.tex
+syntax on
