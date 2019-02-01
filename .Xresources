@@ -64,7 +64,8 @@ URxvt*color11:                 S_base00
 URxvt*color12:                 S_base0
 URxvt*color13:                 S_violet
 URxvt*color14:                 S_base1
-URxvt*color15: S_base3
+URxvt*color15: 		       S_base3
+URxvt*scrollbar: 	       false
 
  
 Xft.autohint: 0

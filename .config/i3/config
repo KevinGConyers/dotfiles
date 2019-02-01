@@ -17,7 +17,7 @@ for_window [instance="music"] floating enable
 for_window [instance="music"] resize set 625 400
 for_window [instance="music"] move scratchpad
 for_window [instance="music"] board pixel 5
-exec --no-startup-id urxvt -pixmap ~/Pictures/.wallpapers/robotrainwallpaper.jpg -name music -e ncmpcpp
+exec --no-startup-id urxvt -pixmap ~/Pictures/.wallpapers/Naut.jpg -name music -e ncmpcpp
 
 
 
