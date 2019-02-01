@@ -13,13 +13,13 @@ for_window [instance="dropdown"] floating enable
 for_window [instance="dropdown"] resize set 625 400
 for_window [instance="dropdown"] move scratchpad
 for_window [instance="dropdown"] border pixel 5
-exec --no-startup-id i3-sensible-terminal -name dropdown
+exec --no-startup-id urxvt -pixmap ~/Pictures/.wallpapers/ArchPunk.jpg -name dropdown
 
 for_window [instance="music"] floating enable
 for_window [instance="music"] resize set 625 400
 for_window [instance="music"] move scratchpad
 for_window [instance="music"] board pixel 5
-exec --no-startup-id urxvt -name music -e ncmpcpp
+exec --no-startup-id urxvt -pixmap ~/Pictures/.wallpapers/robotrainwallpaper.jpg -name music -e ncmpcpp
 
 
 
@@ -173,7 +173,7 @@ exec compton -CGb
 
 # Background
 exec_always feh --bg-fill ~/Pictures/.wallpapers/ArchPunk.jpg
-#exec_always wal -q -i ~/Pictures/.wallpapers/HollowPaper.jpg
+#exec_always wal -q -i ~/Pictures/.wallpapers/ArchPunk.jpg
 exec i3-sensible-terminal
 exec firefox 
 exec --no-startup-id ~/.config/discord/launch.sh
@@ -190,31 +190,33 @@ assign [instance="news"] $ws4
 
 # ======== i3 Theme ========
 
-## Solarized
-#set $yellow          #b58900
-#set $orange          #cb4b16
-#set $red             #dc322f
-#set $magenta         #d33682
-#set $violet          #6c71c4
-#set $blue            #268bd2
-#set $cyan            #2aa198
-#set $cyan_faded      #197170
-#set $green           #859900
-#
-#set $background0     #657b83
-#set $background1     #586e75
-#set $background2     #073642
-#set $background3     #002b36
-#
-#set $foreground0     #839496
-#set $foreground1     #93a1a1
-#set $foreground2     #eee8d5
-#set $foreground3     #fdf6e3
+# Solarized
+set $yellow          #b58900
+set $orange          #cb4b16
+set $red             #dc322f
+set $magenta         #d33682
+set $violet          #6c71c4
+set $blue            #268bd2
+set $cyan            #2aa198
+set $cyan_faded      #197170
+set $green           #859900
+
+set $background0     #657b83
+set $background1     #586e75
+set $background2     #073642
+set $background3     #002b36
+
+set $foreground0     #839496
+set $foreground1     #93a1a1
+set $foreground2     #eee8d5
+set $foreground3     #fdf6e3
+
+set $black 	     #000000	
 
 # window colors             border       bg           text          indic
-client.focused              $cyan        $cyan        $foreground2  $cyan
-client.focused_inactive     $cyan_faded  $cyan_faded  $foreground1  $cyan_faded
-client.unfocused            $cyan_faded  $cyan_faded  $foreground1  $cyan_faded
+client.focused              $blue        $blue        $foreground2  $blue
+client.focused_inactive     $black  	 $black       $black        $black
+client.unfocused            $black  	 $black       $black   	    $black
 client.urgent               $orange      $orange      $foreground2  $orange
 
 # i3-gaps

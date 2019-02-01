@@ -18,12 +18,15 @@ Plugin 'vim-scripts/indentpython.vim'
 Plugin 'vim-syntastic/syntastic'
 Plugin 'nvie/vim-flake8'
 Plugin 'lervag/vimtex'
-"Plugin 'Valloric/YouCompleteMe'
+Plugin 'Valloric/YouCompleteMe'
 Plugin 'l04m33/vlime', {'rtp': 'vim/'}
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
+"General Settings
+set exrc
+set secure
 nnoremap <C-J> <C-W><C-J>
 nnoremap <C-K> <C-W><C-K>
 nnoremap <C-L> <C-W><C-L>
@@ -45,7 +48,6 @@ nnoremap <c-u> viwU<esc>
 nnoremap <leader>i ggvG=
 nnoremap <leader>w dwi
 map <F6> :setlocal spell!<CR>
-inoremap <Space><Space> <Esc>/<++><Enter>"_c4l
 "Abrevviations
 iabbrev --- ---------------------------------------------------------------------------
 
@@ -57,22 +59,6 @@ iabbrev ** /**/
 "Spelling
 set spelllang=en
 set spellfile=$HOME/.vim/spell/en.utf-8.add
-"LateX settings
-autocmd Filetype tex setl updatetime=1
-let g:livepreview_engire = 'mupdf'
-autocmd Filetype tex inoremap <leader>sec \section{<++>}<Enter><++>
-autocmd Filetype tex inoremap <leader>sc* \section*{<++>}<Enter><++>
-autocmd Filetype tex inoremap <leader>bb \textbf{<++>}
-autocmd Filetype tex inoremap <leader>ii <Esc>i\begin{itemize}<Esc>o<Esc>o\end{itemize}<Esc>ki
-autocmd Filetype tex inoremap <leader>ee <Esc>i/begin{enumerate}<Esc>o<Esc>o\end{enumerate}<Esc>ki 
-autocmd Filetype tex iabbrev \begin{gather*} \begin{gather*}<Enter><++><Enter>\end{gather*}
-autocmd Filetype tex iabbrev \begin{align*} \begin{align*}<Enter><++><Enter>\end{align*}
-
-autocmd Filetype tex inoremap <leader>it \item{}<Esc>i
-autocmd Filetype tex set wrap linebreak
-autocmd Filetype tex setlocal spell
-autocmd BufNewFile notes.tex -1read ~/.vim/snippets/Notes.tex
-
 "Python settings
 au FileType py
 			\  setlocal tabstop =4
@@ -87,9 +73,7 @@ au FileType py  match BadWhiteSpcae /\s\+$/
 let python_highlight_all =1
 syntax on
 
-"C++ settings
-autocmd BufNewFile *.cpp r ~/.vim/snippets/cppTemplate1.cpp
-map <F8> :!g++ % && ./a.out <CR>
+
 
 
 "YouCompleteMe settings
