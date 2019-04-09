@@ -1,5 +1,4 @@
-set nocompatible              " required
-filetype plugin on" required
+set nocompatible              " required filetype plugin on" required
 filetype indent on
 let g:tex_flavor='latex'
 " set the runtime path to include Vundle and initialize
@@ -18,6 +17,7 @@ Plugin 'vim-scripts/indentpython.vim'
 Plugin 'vim-syntastic/syntastic'
 Plugin 'nvie/vim-flake8'
 Plugin 'lervag/vimtex'
+"Plugin 'xuhdev/vim-latex-live-preview'
 Plugin 'Valloric/YouCompleteMe'
 Plugin 'l04m33/vlime', {'rtp': 'vim/'}
 
@@ -42,7 +42,9 @@ let maplocalleader = "\\"
 noremap <leader>- ddo<esc>kp
 noremap <leader>_ ddkkp
 noremap <leader>ev :vsplit ~/.vimrc<cr>
+noremap <leader>evl :vsplit ./.vimrc<cr>
 noremap <leader>sv :source ~/.vimrc<cr>
+noremap <leader>svl :source ./.vimrc<cr>
 inoremap <c-u> <esc>viwUi
 nnoremap <c-u> viwU<esc>
 nnoremap <leader>i ggvG=
@@ -68,3 +70,8 @@ let g:ycm_log_level = 'debug'
 
 "HTML And JavaScript
 autocmd BufNewFile js.html -1read ~/.vim/snippets/js.html
+
+"Vimtex stuff
+let g:vimtex_view_general_viewer = 'zathura'
+
+
