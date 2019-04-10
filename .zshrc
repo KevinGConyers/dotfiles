@@ -96,6 +96,7 @@ export PATH=/usr/bin/android-studio/bin:$PATH
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+alias transmission-remote=tsm
 
 
  VISUAL=editor; export VISUAL EDITOR=editor; export EDITOR
