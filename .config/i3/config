@@ -12,13 +12,13 @@ for_window [instance="dropdown"] resize set 625 400
 for_window [instance="dropdown"] move scratchpad
 for_window [instance="dropdown"] border pixel 5
 for_window [instance="dropdown"] client.focused   #000000   #000000  #000000  #000000
-exec --no-startup-id urxvt -pixmap ~/Pictures/.wallpapers/robotrainwallpaper.jpg -name dropdown
+exec --no-startup-id urxvt -pixmap ~/Pictures/.wallpapers/ArchPunk.jpg -name dropdown
 
 for_window [instance="music"] floating enable
 for_window [instance="music"] resize set 625 400
 for_window [instance="music"] move scratchpad
 for_window [instance="music"] board pixel 5
-exec --no-startup-id urxvt -pixmap ~/Pictures/.wallpapers/Naut.jpg -name music -e ncmpcpp
+exec --no-startup-id urxvt -pixmap ~/Pictures/.wallpapers/MinimalCassetteTape.png -name music -e ncmpcpp
 
 
 
@@ -167,17 +167,15 @@ bindsym XF86MonBrightnessUp exec --no-startup-id xbacklight -inc 5
 # Polybar
 exec_always --no-startup-id ~/.config/polybar/launch.sh
 
-# Compton
-exec compton -CGb  
 
 # Background
-exec_always feh --bg-fill ~/Pictures/.wallpapers/ArchPunk.jpg
-#exec_always wal -q -i ~/Pictures/.wallpapers/ArchPunk.jpg
+exec_always feh --bg-fill ~/Pictures/.wallpapers/MinimalClock.png
+#exec_always wal -i ~/Pictures/.wallpapers/MinimalClock.png
+exec compton --config ~/.config/compton/compton.conf -b
 exec i3-sensible-terminal
 exec firefox 
-exec --no-startup-id ~/.config/discord/launch.sh
-exec --no-startup-id i3-sensible-terminal -name news -e newsboat
 #exec atom
+# Compton
 
 
 # ======= Workspace Setup =======

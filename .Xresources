@@ -12,10 +12,9 @@
 #define S_blue          #268bd2
 #define S_cyan          #2aa198
 #define S_green         #859900
-
-
-! Dark
-
+!
+!! Dark
+!
 #define S_base03        #002b36
 #define S_base02        #073642
 #define S_base01        #586e75
@@ -24,7 +23,7 @@
 #define S_base1         #93a1a1
 #define S_base2         #eee8d5
 #define S_base3         #fdf6e3
-
+!
 
 ! Light
 
@@ -42,29 +41,67 @@
 !
 ! URxvt*background:            S_base03
 
+!URxvt*depth: 32
+!URxvt*background:              [60]#000000
+!URxvt*foreground:              S_blue
+!URxvt*cursorColor:             S_base1
+!URxvt*pointerColorBackground:  S_base01
+!URxvt*pointerColorForeground:  S_base1
+!URxvt*color0:                  S_base02
+!URxvt*color1:                  S_red
+!URxvt*color2:                  S_green
+!URxvt*color3:                  S_yellow
+!URxvt*color4:                  S_blue
+!URxvt*color5:                  S_magenta
+!URxvt*color6:                  S_cyan
+!URxvt*color7:                  S_base2
+!URxvt*color9:                  S_orange
+!URxvt*color8:                  S_base03
+!URxvt*color10:                 S_base01
+!URxvt*color11:                 S_base00
+!URxvt*color12:                 S_base0
+!URxvt*color13:                 S_violet
+!URxvt*color14:                 S_base1
+!URxvt*color15: 		       S_base3
+!URxvt*scrollbar: 	       false
+! -----------------------------------------------------------------------------
+! File: gruvbox-dark.xresources
+! Description: Retro groove colorscheme generalized
+! Author: morhetz <morhetz@gmail.com>
+! Source: https://github.com/morhetz/gruvbox-generalized
+! Last Modified: 6 Sep 2014
+! -----------------------------------------------------------------------------
+
+! hard contrast: URxvt*background: #1d2021
 URxvt*depth: 32
-URxvt*background:              [60]#000000
-URxvt*foreground:              S_blue
-URxvt*cursorColor:             S_base1
-URxvt*pointerColorBackground:  S_base01
-URxvt*pointerColorForeground:  S_base1
-URxvt*color0:                  S_base02
-URxvt*color1:                  S_red
-URxvt*color2:                  S_green
-URxvt*color3:                  S_yellow
-URxvt*color4:                  S_blue
-URxvt*color5:                  S_magenta
-URxvt*color6:                  S_cyan
-URxvt*color7:                  S_base2
-URxvt*color9:                  S_orange
-URxvt*color8:                  S_base03
-URxvt*color10:                 S_base01
-URxvt*color11:                 S_base00
-URxvt*color12:                 S_base0
-URxvt*color13:                 S_violet
-URxvt*color14:                 S_base1
-URxvt*color15: 		       S_base3
-URxvt*scrollbar: 	       false
+URxvt*background: [60]#282828
+! soft contrast: URxvt*background: #32302f
+URxvt*foreground: #ebdbb2
+! Black + DarkGrey
+URxvt*color0:  #282828
+URxvt*color8:  #928374
+! DarkRed + Red
+URxvt*color1:  #cc241d
+URxvt*color9:  #fb4934
+! DarkGreen + Green
+URxvt*color2:  #98971a
+URxvt*color10: #b8bb26
+! DarkYellow + Yellow
+URxvt*color3:  #d79921
+URxvt*color11: #fabd2f
+! DarkBlue + Blue
+URxvt*color4:  #458588
+URxvt*color12: #83a598
+! DarkMagenta + Magenta
+URxvt*color5:  #b16286
+URxvt*color13: #d3869b
+! DarkCyan + Cyan
+URxvt*color6:  #689d6a
+URxvt*color14: #8ec07c
+! LightGrey + White
+URxvt*color7:  #a89984
+URxvt*color15: #ebdbb2
+URxvt*scrollbar: false
 
  
 Xft.autohint: 0

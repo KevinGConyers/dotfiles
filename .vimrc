@@ -20,6 +20,7 @@ Plugin 'lervag/vimtex'
 "Plugin 'xuhdev/vim-latex-live-preview'
 Plugin 'Valloric/YouCompleteMe'
 Plugin 'l04m33/vlime', {'rtp': 'vim/'}
+Plugin 'morhetz/gruvbox'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
