@@ -166,6 +166,7 @@ bindsym XF86MonBrightnessUp exec --no-startup-id xbacklight -inc 5
 
 # Polybar
 exec_always --no-startup-id ~/.config/polybar/launch.sh
+exec_always --no-startup-id /usr/bin/dunst
 
 
 # Background
