@@ -12,7 +12,7 @@ for_window [instance="dropdown"] resize set 625 400
 for_window [instance="dropdown"] move scratchpad
 for_window [instance="dropdown"] border pixel 5
 for_window [instance="dropdown"] client.focused   #000000   #000000  #000000  #000000
-exec --no-startup-id urxvt -pixmap ~/Pictures/.wallpapers/ArchPunk.jpg -name dropdown
+exec --no-startup-id urxvt -pixmap ~/Pictures/.wallpapers/archpunk.jpg -name dropdown
 
 for_window [instance="music"] floating enable
 for_window [instance="music"] resize set 625 400
