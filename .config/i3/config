@@ -37,6 +37,7 @@ bindsym $mod+Shift+Return exec i3-sensible-terminal -name "floating_term"
 bindsym $mod+Shift+q kill
 
 bindsym Super_L exec --no-startup-id dmenu_run -b
+bindsym $mod+t exec bash ~/.scripts/dmenu/EpisodeSelect.sh
 #scratchpads
 bindsym $mod+u [instance="dropdown"] scratchpad show; [instance="dropdown"] move position center
 
