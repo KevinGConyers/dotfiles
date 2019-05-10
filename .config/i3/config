@@ -28,6 +28,7 @@ exec --no-startup-id urxvt -pixmap ~/Pictures/.wallpapers/MinimalCassetteTape.pn
 # ======== Bindings ========
 
 set $mod Mod1
+set $sup Super_L
 
 floating_modifier $mod
 
@@ -36,8 +37,9 @@ bindsym $mod+Shift+Return exec i3-sensible-terminal -name "floating_term"
 
 bindsym $mod+Shift+q kill
 
-bindsym Super_L exec --no-startup-id dmenu_run -b
+bindsym $sup exec --no-startup-id dmenu_run -b
 bindsym $mod+t exec bash ~/.scripts/dmenu/EpisodeSelect.sh
+bindsym $mod+d exec bash ~/.scripts/dmenu/hwdir.sh
 #scratchpads
 bindsym $mod+u [instance="dropdown"] scratchpad show; [instance="dropdown"] move position center
 
