@@ -103,6 +103,9 @@ alias tsm="transmission-remote"
 export EDITOR=/usr/bin/vim
 export VISUAL=/usr/bin/vim
 
+#ColorTerm
+export COLORTERM=rxvt-unicode-256color
+
 
 #Path
 export PATH=~/bin:.:$PATH
