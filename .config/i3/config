@@ -12,13 +12,13 @@ for_window [instance="dropdown"] resize set 625 400
 for_window [instance="dropdown"] move scratchpad
 for_window [instance="dropdown"] border pixel 5
 for_window [instance="dropdown"] client.focused   #000000   #000000  #000000  #000000
-exec --no-startup-id urxvt -pixmap ~/Pictures/.wallpapers/archpunk.jpg -name dropdown
+#exec --no-startup-id urxvt -pixmap ~/Pictures/.wallpapers/archpunk.jpg -name dropdown
 
 for_window [instance="music"] floating enable
 for_window [instance="music"] resize set 625 400
 for_window [instance="music"] move scratchpad
 for_window [instance="music"] board pixel 5
-exec --no-startup-id urxvt -pixmap ~/Pictures/.wallpapers/MinimalCassetteTape.png -name music -e ncmpcpp
+#exec --no-startup-id urxvt -pixmap ~/Pictures/.wallpapers/MinimalCassetteTape.png -name music -e ncmpcpp
 
 
 
@@ -168,7 +168,9 @@ bindsym XF86MonBrightnessUp exec --no-startup-id xbacklight -inc 5
 # ======== Startup ========
 
 # Polybar
-exec_always --no-startup-id ~/.config/polybar/launch.sh
+#exec_always --no-startup-id ~/.config/polybar/launch.sh
+
+#Dunst
 exec_always --no-startup-id /usr/bin/dunst
 
 
