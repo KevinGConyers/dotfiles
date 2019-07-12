@@ -1,9 +1,26 @@
 #!/bin/bash
 
-show=$(ls ~/Media | dmenu -i -b -p "Show:")
+cd /home/kevin/mnt/media/
 
-cd /home/kevin/Media/"$show"/
+media=$(ls ./ | dmenu -i -b -p "What to Open")
 
-episode=$(ls ./ | dmenu -i -b -p "Episode: ")
+cd ./$media
+if [[ $media == "Shows"  ]]
+then
+	genre=$(ls ./ | dmenu -i -b -p "Which type of $(media)")
 
-mpv "$episode" &
+	cd ./$genre
+	
+	season=$(ls ./ | dmenu -i -b -p "Which $(genre)")
+
+	episode=$(ls ~/mnt/media/$media/$genre/$season | dmenu -i -b -p "Which Episode: ")
+
+	mpv "$episode" &
+fi
+if [[ $media == "Movies" ]]
+then
+	cd ./$media
+	episode=$(ls ./ | dmenu -i -b -p "Which Movie: ")
+
+	mpv "$episode" &
+fi

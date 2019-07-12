@@ -20,3 +20,4 @@ autocmd FileType cpp inoremap <F8> :!g++ % && ./a.out <CR>
 autocmd FileType cpp iabbrev { {<Enter><++><Enter>}
 autocmd FileType cpp iabbrev ( ()<Esc>hi
 autocmd Filetype cpp iabbrev [ []<Esc>hi
+autocmd FileType cpp iabbrev ** /**/<Esc>hi

@@ -102,13 +102,15 @@ alias tsm="transmission-remote"
  VISUAL=editor; export VISUAL EDITOR=editor; export EDITOR
 export EDITOR=/usr/bin/vim
 export VISUAL=/usr/bin/vim
+#Term
+export TERM=rxvt-unicode-256color
 
 #ColorTerm
 export COLORTERM=rxvt-unicode-256color
 
 
 #Path
-export PATH=~/bin:.:$PATH
+export PATH=$PATH:~/bin:.:~/PythonProjects/SearchSwarm:.:~/PythonProjects/SearchSwarm/bin:.:~/.scripts/
 
 #Streaming
 streaming() {

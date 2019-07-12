@@ -38,7 +38,7 @@ bindsym $mod+Shift+Return exec i3-sensible-terminal -name "floating_term"
 bindsym $mod+Shift+q kill
 
 bindsym $sup exec --no-startup-id dmenu_run -b
-bindsym $mod+t exec bash ~/.scripts/dmenu/EpisodeSelect.sh
+bindsym $mod+t exec bash ~/.scripts/dmenu/MediaSelect.sh
 bindsym $mod+d exec bash ~/.scripts/dmenu/hwdir.sh
 #scratchpads
 bindsym $mod+u [instance="dropdown"] scratchpad show; [instance="dropdown"] move position center
@@ -173,11 +173,11 @@ exec_always --no-startup-id /usr/bin/dunst
 
 
 # Background
-exec_always feh --bg-fill ~/Pictures/.wallpapers/MinimalClock.png
+exec_always feh --bg-fill ~/Pictures/.wallpapers/BirdOnBamboo.jpg
 #exec_always wal -i ~/Pictures/.wallpapers/MinimalClock.png
 exec compton --config ~/.config/compton/compton.conf -b
-exec i3-sensible-terminal
-exec firefox 
+#exec i3-sensible-terminal
+#exec firefox 
 #exec atom
 # Compton
 
