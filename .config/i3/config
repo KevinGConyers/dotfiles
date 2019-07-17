@@ -11,14 +11,13 @@ for_window [instance="dropdown"] floating enable
 for_window [instance="dropdown"] resize set 625 400
 for_window [instance="dropdown"] move scratchpad
 for_window [instance="dropdown"] border pixel 5
-for_window [instance="dropdown"] client.focused   #000000   #000000  #000000  #000000
-#exec --no-startup-id urxvt -pixmap ~/Pictures/.wallpapers/archpunk.jpg -name dropdown
+exec --no-startup-id urxvt -pixmap ~/Pictures/.wallpapers/archpunk.jpg -name dropdown
 
 for_window [instance="music"] floating enable
 for_window [instance="music"] resize set 625 400
 for_window [instance="music"] move scratchpad
 for_window [instance="music"] board pixel 5
-#exec --no-startup-id urxvt -pixmap ~/Pictures/.wallpapers/MinimalCassetteTape.png -name music -e ncmpcpp
+exec --no-startup-id urxvt -pixmap ~/Pictures/.wallpapers/MinimalCassetteTape.png -name music -e ncmpcpp
 
 
 
@@ -37,7 +36,7 @@ bindsym $mod+Shift+Return exec i3-sensible-terminal -name "floating_term"
 
 bindsym $mod+Shift+q kill
 
-bindsym $sup exec --no-startup-id dmenu_run -b
+bindsym $mod+space exec --no-startup-id dmenu_run 
 bindsym $mod+t exec bash ~/.scripts/dmenu/MediaSelect.sh
 bindsym $mod+d exec bash ~/.scripts/dmenu/hwdir.sh
 #scratchpads
@@ -83,10 +82,10 @@ bindsym $mod+w layout tabbed
 bindsym $mod+e layout toggle split
 
 # toggle tiling / floating
-bindsym $mod+Shift+space floating toggle
+bindsym $sup+Shift+space floating toggle
 
 # change focus between tiling / floating windows
-bindsym $mod+space focus mode_toggle
+bindsym $sup+space focus mode_toggle
 
 # focus the parent container
 bindsym $mod+a focus parent
@@ -177,11 +176,15 @@ exec_always --no-startup-id /usr/bin/dunst
 # Background
 exec_always feh --bg-fill ~/Pictures/.wallpapers/BirdOnBamboo.jpg
 #exec_always wal -i ~/Pictures/.wallpapers/MinimalClock.png
+# Compton
 exec compton --config ~/.config/compton/compton.conf -b
 #exec i3-sensible-terminal
 #exec firefox 
 #exec atom
-# Compton
+#
+#Kill Plasma Desktop
+exec --no-startup-id wmctrl -c Plasma
+for_window [title="Desktop — Plasma"] kill; floating enable; border none
 
 
 # ======= Workspace Setup =======

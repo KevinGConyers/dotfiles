@@ -1,0 +1,1 @@
+/home/kevin/.scripts/ncmpcpp/art.sh
