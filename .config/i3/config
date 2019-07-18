@@ -13,11 +13,6 @@ for_window [instance="dropdown"] move scratchpad
 for_window [instance="dropdown"] border pixel 5
 exec --no-startup-id urxvt -pixmap ~/Pictures/.wallpapers/archpunk.jpg -name dropdown
 
-for_window [instance="music"] floating enable
-for_window [instance="music"] resize set 625 400
-for_window [instance="music"] move scratchpad
-for_window [instance="music"] board pixel 5
-exec --no-startup-id urxvt -pixmap ~/Pictures/.wallpapers/MinimalCassetteTape.png -name music -e ncmpcpp
 
 
 
@@ -36,13 +31,21 @@ bindsym $mod+Shift+Return exec i3-sensible-terminal -name "floating_term"
 
 bindsym $mod+Shift+q kill
 
+# Make the currently focused window a scratchpad
+bindsym $mod+Shift+minus move scratchpad
+
+# Show the first scratchpad window
+bindsym $mod+minus scratchpad show
+
+
 bindsym $mod+space exec --no-startup-id dmenu_run 
 bindsym $mod+t exec bash ~/.scripts/dmenu/MediaSelect.sh
 bindsym $mod+d exec bash ~/.scripts/dmenu/hwdir.sh
+bindsym $mod+p exec --no-startup-id bash ~/.scripts/dmenu/emojipicker.sh	
+
 #scratchpads
 bindsym $mod+u [instance="dropdown"] scratchpad show; [instance="dropdown"] move position center
 
-bindsym $mod+m [instance="music"] scratchpad show; [instance="music"] move position center
 # change focus
 bindsym $mod+j focus left
 bindsym $mod+k focus down
@@ -82,7 +85,7 @@ bindsym $mod+w layout tabbed
 bindsym $mod+e layout toggle split
 
 # toggle tiling / floating
-bindsym $sup+Shift+space floating toggle
+bindsym $sup+Shift floating toggle
 
 # change focus between tiling / floating windows
 bindsym $sup+space focus mode_toggle
@@ -92,6 +95,7 @@ bindsym $mod+a focus parent
 
 #Screenshot
 bindsym --release Print exec "scrot -m '~/Pictures/ScreenShots/%s_%H%M_%d.%m.%Y_$wx$h.png'"
+
 
 set $ws1 "1"
 set $ws2 "2"

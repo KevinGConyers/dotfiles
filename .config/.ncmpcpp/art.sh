@@ -29,7 +29,7 @@ function reset_background
         convert "$src" -resize 300x "$COVER"
         if [[ -f "$COVER" ]] ; then
            #scale down the cover to 30% of the original
-           printf "\e]20;${COVER};30x70+0+00:op=keep-aspect\a"
+           printf "                           \e]20;${COVER};30x70+0+00:op=keep-aspect\a"
         else
             reset_background
         fi
