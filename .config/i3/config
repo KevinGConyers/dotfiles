@@ -24,7 +24,7 @@ exec --no-startup-id urxvt -pixmap ~/Pictures/.wallpapers/archpunk.jpg -name dro
 set $mod Mod1
 set $sup Super_L
 
-floating_modifier $mod
+#floating_modifier $mod
 
 bindsym $mod+Return exec i3-sensible-terminal
 bindsym $mod+Shift+Return exec i3-sensible-terminal -name "floating_term"
@@ -85,7 +85,7 @@ bindsym $mod+w layout tabbed
 bindsym $mod+e layout toggle split
 
 # toggle tiling / floating
-bindsym $sup+Shift floating toggle
+bindsym $mod+Shift+f floating toggle
 
 # change focus between tiling / floating windows
 bindsym $sup+space focus mode_toggle
@@ -94,7 +94,7 @@ bindsym $sup+space focus mode_toggle
 bindsym $mod+a focus parent
 
 #Screenshot
-bindsym --release Print exec "scrot -m '~/Pictures/ScreenShots/%s_%H%M_%d.%m.%Y_$wx$h.png'"
+bindsym --release Print exec "scrot ~/Pictures/ScreenShots/Screenshot_%d_%m_%Y_$wx$h.png"
 
 
 set $ws1 "1"

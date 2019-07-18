@@ -62,7 +62,7 @@ visualizer_sync_interval = 30
 #
 ## Available values: spectrum, wave, wave_filled, ellipse.
 ##
-visualizer_type = spectrum
+visualizer_type = wave_filled
 #
 #visualizer_look = ●▮
 #visualizer_look = "◆│"
@@ -174,7 +174,14 @@ system_encoding = "UTF-8"
 #
 #uncomment both statement's below if you want to display the albumart
 
+
+
+
+
+### ART SCRIPT ###
 execute_on_song_change="~/.ncmpcpp/art.sh"
+
+
 #song_list_format = " $5%l  $7%t $R$5%a  "
 
 #song_status_format = "$b$7♫ $2%a $4⟫$3⟫ $8%t $4⟫$3⟫ $5%b "
@@ -370,11 +377,9 @@ progressbar_look = "▊▊▊"
 #
 #default_tag_editor_pattern = %n - %t
 #
-#header_visibility = yes
-header_visibility = no
-#
-#statusbar_visibility = yes
-statusbar_visibility = no
+header_visibility = yes
+statusbar_visibility = yes
+titles_visibility = yes
 #
 #titles_visibility = yes
 #
