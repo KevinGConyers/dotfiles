@@ -1,4 +1,12 @@
+#Term
+export TERM="rxvt-unicode-256color"
+
+#ColorTerm
+export COLORTERM="xterm-256color"
+
+
 # If you come from bash you might have to change your $PATH.
+
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
@@ -102,15 +110,10 @@ alias tsm="transmission-remote"
  VISUAL=editor; export VISUAL EDITOR=editor; export EDITOR
 export EDITOR=/usr/bin/vim
 export VISUAL=/usr/bin/vim
-#Term
-export TERM=rxvt-unicode-256color
-
-#ColorTerm
-export COLORTERM=rxvt-unicode-256color
 
 
 #Path
-export PATH=$PATH:~/bin:.:~/PythonProjects/SearchSwarm:.:~/PythonProjects/SearchSwarm/bin:.:~/.scripts/
+export PATH=$PATH:~/bin:.:~/PythonProjects/SearchSwarm:.:~/PythonProjects/SearchSwarm/bin:.:~/.scripts/:.:~/.gem/ruby/2.6.0/bin
 
 #Streaming
 streaming() {
