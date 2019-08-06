@@ -28,10 +28,12 @@ filetype plugin indent on    " required
 "General Settings
 set exrc
 set secure
-nnoremap <C-j> <C-W><C-J>
-nnoremap <C-k> <C-W><C-K>
-nnoremap <C-l> <C-W><C-L>
-nnoremap <C-h> <C-W><C-H>
+nnoremap <C-J> <C-W><C-J>
+nnoremap <C-K> <C-W><C-K>
+nnoremap <C-L> <C-W><C-L>
+nnoremap <C-H> <C-W><C-H>
+set splitbelow
+set splitright
 set nu
 " Enable Folding with spacebard in normal mode
 set foldmethod=indent
