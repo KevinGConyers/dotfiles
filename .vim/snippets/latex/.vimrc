@@ -13,6 +13,6 @@ autocmd Filetype tex iabbrev \begin{align*} \begin{align*}<Enter><++><Enter>\end
 autocmd Filetype tex inoremap <leader>it \item{}<Esc>i
 autocmd Filetype tex set wrap linebreak
 autocmd Filetype tex setlocal spell
-autocmd BufNewFile notes.tex -1read ~/.vim/snippets/Notes.tex
+autocmd BufNewFile Notes.tex -1read ~/.vim/snippets/latex/Template.tex
 colo distinguished
 syntax on

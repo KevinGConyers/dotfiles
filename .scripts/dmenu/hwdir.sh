@@ -21,8 +21,8 @@ if [[ "$ftype" == "Notes" ]]; then
 	date=$(date +%d_%m_%Y)
 	mkdir ./"Notes from $date"
 	cd ./"Notes from $date"
-	cp -r .vim/snippets/latex/. ./
-	mv ./Template.tex Notes.tex
+	cp -r ~/.vim/snippets/latex/.vimrc ./
+	touch ./Notes.tex
 fi
 
 
