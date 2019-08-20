@@ -113,7 +113,7 @@ export VISUAL=/usr/bin/vim
 
 
 #Path
-export PATH=$PATH:~/bin:.:~/PythonProjects/SearchSwarm:.:~/PythonProjects/SearchSwarm/bin:.:~/.scripts/:.:~/.gem/ruby/2.6.0/bin
+export PATH=$PATH:~/bin:.:~/PythonProjects/SearchSwarm:.:~/PythonProjects/SearchSwarm/bin:.:~/.scripts/:.:~/.gem/ruby/2.6.0/bin:.:~/.local/bin
 
 #Streaming
 streaming() {
