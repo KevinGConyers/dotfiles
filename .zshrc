@@ -111,9 +111,11 @@ alias tsm="transmission-remote"
 export EDITOR=/usr/bin/vim
 export VISUAL=/usr/bin/vim
 
+export DOTNET_ROOT=/usr/share/dotnet 
+
 
 #Path
-export PATH=$PATH:~/bin:.:~/PythonProjects/SearchSwarm:.:~/PythonProjects/SearchSwarm/bin:.:~/.scripts/:.:~/.gem/ruby/2.6.0/bin:.:~/.local/bin
+export PATH=$PATH:~/bin:.:~/PythonProjects/SearchSwarm:.:~/PythonProjects/SearchSwarm/bin:.:~/.scripts/:.:~/.gem/ruby/3.6.0/bin:.:~/.local/bin:.:~/.cargo/env:.:~/.dotnet/tools
 
 #Streaming
 streaming() {

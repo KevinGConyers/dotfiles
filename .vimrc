@@ -21,11 +21,14 @@ Plugin 'lervag/vimtex'
 Plugin 'Valloric/YouCompleteMe'
 Plugin 'l04m33/vlime', {'rtp': 'vim/'}
 Plugin 'morhetz/gruvbox'
+Plugin 'rdnetto/YCM-Generator'
+Plugin 'JamshedVesuna/vim-markdown-preview'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
 "General Settings
+colo industry
 set exrc
 set secure
 nnoremap <C-J> <C-W><C-J>
@@ -44,17 +47,17 @@ let mapleader = "-"
 let maplocalleader = "\\"
 noremap <leader>- ddo<esc>kp
 noremap <leader>_ ddkkp
-noremap <leader>ev :vsplit ~/.vimrc<cr>
+noremap <leader>ev :vsplit ~/.vim/.vimrc<cr>
 noremap <leader>evl :vsplit ./.vimrc<cr>
-noremap <leader>sv :source ~/.vimrc<cr>
+noremap <leader>sv :source ~/.vim/.vimrc<cr>
 noremap <leader>svl :source ./.vimrc<cr>
 inoremap <c-u> <esc>viwUi
 nnoremap <c-u> viwU<esc>
 nnoremap <leader>i ggvG=
 nnoremap <leader>w dwi
 map <F6> :setlocal spell!<CR>
+colo gruvbox
 "Abrevviations
-iabbrev --- ---------------------------------------------------------------------------
 
 iabbrev adn and
 iabbrev waht what
@@ -70,6 +73,8 @@ set spellfile=$HOME/.vim/spell/en.utf-8.add
 "YouCompleteMe settings
 let g:ycm_keep_logfiles = 1
 let g:ycm_log_level = 'debug'
+let g:ycm_clangd_binary_path = "/usr/bin/clangd"
+let g:ycm_global_ycm_extra_conf = "/home/kevin/.vim/bundle/YouCompleteMe/.ycm_extra_conf.py"
 
 "HTML And JavaScript
 autocmd BufNewFile js.html -1read ~/.vim/snippets/js.html
@@ -78,3 +83,7 @@ autocmd BufNewFile js.html -1read ~/.vim/snippets/js.html
 let g:vimtex_view_general_viewer = 'zathura'
 
 
+"Markdown
+autocmd BufRead,BufNewFile *.md set filetype=Markdown
+au Filetype Markdown setlocal wrap textwidth=80
+au Filetype Markdown setlocal spell
