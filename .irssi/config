@@ -165,7 +165,7 @@ channels = (
   { name = "silc"; chatnet = "SILC"; autojoin = "No"; },
   { name = "#archlinux"; chatnet = "Freenode"; autojoin = "yes"; },
   { name = "#math"; chatnet = "Freenode"; autojoin = "yes"; },
-  { name = "#irssi"; chatnet = "Freenode"; autojoin = "yes"; },
+  { name = "#irssi"; chatnet = "Freenode"; autojoin = "yes"; }
 );
 
 aliases = {
