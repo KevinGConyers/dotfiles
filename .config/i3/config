@@ -178,7 +178,7 @@ exec_always --no-startup-id /usr/bin/dunst
 
 
 # Background
-exec_always feh --bg-fill ~/Pictures/.wallpapers/BirdOnBamboo.jpg
+exec_always feh --bg-fill ~/Pictures/.wallpapers/WolfwoodStars.png
 #exec_always wal -i ~/Pictures/.wallpapers/MinimalClock.png
 # Compton
 exec compton --config ~/.config/compton/compton.conf -b
