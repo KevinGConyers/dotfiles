@@ -31,13 +31,6 @@ servers = (
     port = "6667";
   },
   { address = "irc.netfuze.net"; chatnet = "NetFuze"; port = "6667"; },
-  {
-    address = "irc.oftc.net";
-    chatnet = "OFTC";
-    port = "6697";
-    use_tls = "yes";
-    tls_verify = "yes";
-  },
   { 
     address = "irc.quakenet.org";
     chatnet = "QuakeNet";
@@ -78,6 +71,15 @@ servers = (
     port = "6667";
     use_tls = "no";
     tls_verify = "no";
+  },
+  {
+    address = "irc.oftc.net";
+    chatnet = "OFTC";
+    port = "6697";
+    use_tls = "yes";
+    tls_cert = "~/.irssi/certs/nick.pem";
+    tls_verify = "yes";
+    autoconnect = "yes";
   }
 );
 
@@ -124,7 +126,6 @@ chatnets = {
     max_msgs = "1";
     max_whois = "1";
   };
-  OFTC = { type = "IRC"; max_kicks = "1"; max_msgs = "1"; max_whois = "1"; };
   QuakeNet = {
     type = "IRC";
     max_kicks = "1";
@@ -153,6 +154,7 @@ chatnets = {
     sasl_password = "V3ryC0mpl3x!";
   };
   ImplyingRigged = { type = "IRC"; };
+  OFTC = { type = "IRC"; };
 };
 
 channels = (
@@ -161,11 +163,12 @@ channels = (
   { name = "#irssi"; chatnet = "IRCNet"; autojoin = "No"; },
   { name = "#ircsource"; chatnet = "IRCSource"; autojoin = "No"; },
   { name = "#netfuze"; chatnet = "NetFuze"; autojoin = "No"; },
-  { name = "#oftc"; chatnet = "OFTC"; autojoin = "No"; },
   { name = "silc"; chatnet = "SILC"; autojoin = "No"; },
   { name = "#archlinux"; chatnet = "Freenode"; autojoin = "yes"; },
-  { name = "#math"; chatnet = "Freenode"; autojoin = "yes"; },
-  { name = "#irssi"; chatnet = "Freenode"; autojoin = "yes"; }
+  { name = "#irssi"; chatnet = "Freenode"; autojoin = "yes"; },
+  { name = "#suckless"; chatnet = "OFTC"; autojoin = "yes"; },
+  { name = "#rust-embedded"; chatnet = "Freenode"; autojoin = "yes"; },
+  { name = "##math"; chatnet = "freenode"; autojoin = "yes"; }
 );
 
 aliases = {
@@ -390,23 +393,37 @@ windows = {
       {
         type = "CHANNEL";
         chat_type = "IRC";
-        name = "#RPG-Hub";
-        tag = "Darkmyst";
+        name = "#suckless";
+        tag = "OFTC";
       }
     );
+    sticky = "yes";
+    parent = "1";
+  };
+  7 = {
+    items = (
+      {
+        type = "CHANNEL";
+        chat_type = "IRC";
+        name = "#rust-embedded";
+        tag = "Freenode";
+      }
+    );
+    sticky = "yes";
+    parent = "1";
   };
 };
 mainwindows = {
   1 = { 
-    first_line = "6";
-    lines = "42";
+    first_line = "4";
+    lines = "37";
     first_column = "0";
-    columns = "199";
+    columns = "177";
   };
   3 = { 
     first_line = "1";
-    lines = "5";
+    lines = "3";
     first_column = "0";
-    columns = "199";
+    columns = "177";
   };
 };

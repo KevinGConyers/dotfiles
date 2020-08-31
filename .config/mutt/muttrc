@@ -1,0 +1,33 @@
+#colors
+source colors.muttrc
+
+
+#sort
+set sort = "reverse-date"
+
+
+## General options
+set header_cache = "~/.cache/mutt"
+set imap_check_subscribed
+set imap_keepalive = 300
+unset imap_passive
+set mail_check = 60
+set mbox_type=Maildir
+
+## ACCOUNT1
+ source "~/.config/mutt/shock"
+# Here we use the $folder variable that has just been set in the sourced file.
+# We must set it right now otherwise the 'folder' variable will change in the next sourced file.
+folder-hook $folder 'source ~/.config/mutt/shock'
+
+## ACCOUNT2
+ source "~/.config/mutt/professional"
+ folder-hook kevingconyers@gmail.com/ 'source ~/.config/mutt/professional'
+ folder-hook kevingconyers@gmail.com/ 'set realname="Kevin"'
+
+
+
+## send hooks
+
+send-hook "@gmail.com" set signature=~/.config/mutt/psig.md
+send-hook "@shocktohp.xyz" set signature=~/.config/mutt/shockpsig.md
